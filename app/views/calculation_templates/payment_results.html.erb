@@ -2,16 +2,16 @@
 
 <dl>
 <dt>APR</dt>
-<dd><%= @apr %></dd>
+<dd><%= number_to_percentage(@apr, precision: 4) %></dd>
 
 <dt>Number of years</dt>
 <dd><%= @years %></dd>
 
 <dt>Principal</dt>
-<dd><%= @principal %> </dd>
+<dd><%= number_to_currency(@principal, precision: 2) %> </dd>
 
 <dt>Payment</dt>
-<dd><%= @random %> </dd>
+<dd><%= number_to_currency(@payment, precision: 2) %> </dd>
 </dl>
 
 <a href="/payment/new">Calculate another payment</a>
